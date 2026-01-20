@@ -209,8 +209,7 @@ DOP常用指标包括GDOP、PDOP、HDOP、VDOP、TDOP等。对于地面用户，
 $$
 \begin{aligned}
 \ddot{\mathbf{r}} &= -\frac{\mu}{r^3}\mathbf{r} \\
-v^2 &= \mu\left(\frac{2}{r}-\frac{1}{a}\right)\\n=\sqrt{\frac{\mu}{a^{3}}}
-
+v^2 &= \mu\left(\frac{2}{r}-\frac{1}{a}\right)\\n=n
 \end{aligned}
 $$
 
@@ -291,6 +290,6 @@ $$
 
 需要强调的是，星历定位并不要求用户理解全部动力学细节，但理解动力学模型的分层结构会显著提升对算法行为的解释力。无摄运动提供可解析且数值稳定的主结构，受摄运动解释为何轨道根数会漂移以及为何必须引入长期项与短周期项，星历定位则把这些物理与工程折中凝结为一套可由接收机实时执行的计算链条。从系统工程视角看星历的设计是一种把复杂动力学压缩成有限参数的艺术，既要让参数数量可控又要让它在小时级外推内足以吸收主要摄动力的影响，这正是现代导航系统持续演进的重要方向。
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjIwMTUyMjA3LC01MjQwMjQ2NzYsMjEzMD
-E5NDUyOCwxNjgyOTg0Njc2XX0=
+eyJoaXN0b3J5IjpbLTE5MDU4MDM5MDksLTUyNDAyNDY3NiwyMT
+MwMTk0NTI4LDE2ODI5ODQ2NzZdfQ==
 -->
