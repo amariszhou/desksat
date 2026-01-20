@@ -252,17 +252,30 @@ $$
 
 真实的导航卫星并不满足二体假设，除地球中心引力外还会受到多种摄动力的影响。这些摄动力让原本应保持常量的开普勒根数变为时间的函数，从而在长期长周期或短周期尺度上发生变化。对中圆轨道及更高轨道高度的导航卫星而言，大气阻力一般可以忽略，主要需要关注的摄动力往往包括地球非球形引力项，日月引力摄动、太阳光压以及潮汐等效应。
 
-![](media/image17.png)
+$$
+\ddot{\mathbf r}=-\frac{\mu}{r^{3}}\mathbf r+\mathbf a_{\mathrm{pert}} \tag{9}
+$$
 
-![](media/image18.png)
+$$
+\mathbf a_{\mathrm{pert}}=\mathbf a_{J2}+\mathbf a_{3\mathrm{rd}}+\mathbf a_{\mathrm{SRP}}+\cdots \tag{10}
+$$
 
-![](media/image19.png)
+$$
+U_{J2}=\frac{\mu}{r}J_{2}\left(\frac{R_e}{r}\right)^{2}\frac{1}{2}\left(3\sin^{2}\varphi-1\right) \tag{11}
+$$
 
-![](media/image20.png)
+$$
+\mathbf a_{J2}=-\nabla U_{J2} \tag{12}
+$$
 
-![](media/image21.png)
+$$
+\dot{\Omega}=-\frac{3}{2}J_{2}n\left(\frac{R_e}{p}\right)^{2}\cos i \tag{13}
+$$
 
-![](media/image22.png)
+$$
+\dot{\omega}=\frac{3}{4}J_{2}n\left(\frac{R_e}{p}\right)^{2}\left(5\cos^{2}i-1\right) \tag{14}
+$$
+
 
 受摄运动的动力学表达式如式9-10所示，地球非球形J2引力势与加速度如式11-12所示，长期进动率如式13-14所示。
 
@@ -270,7 +283,13 @@ $$
 
 地球非球形摄动中，J2 项来源于地球扁率导致的引力位偏离球对称，会使轨道平面发生缓慢进动，具体表现为升交点的长期漂移和近地点角距的缓慢变化，同时对平近点角的变化率产生影响。对近地点角距而言存在一个著名的临界倾角现象，当倾角约为 63.4 度时，近地点角距的长期漂移近似为零，近地点在轨道平面内近似不动，这在某些轨道设计中具有重要意义。平近点角的长期项也会受到J2摄动影响，对中圆轨道卫星而言，平均运动的改正量可以达到每天百分之一度量级，这类长期项会在星历与用户算法中被单独处理。
 
-![](media/image23.png)
+$$
+\mathbf a_{3\mathrm{rd}}
+=\mu_{3}\left(
+\frac{\mathbf r_{3}-\mathbf r}{\left\|\mathbf r_{3}-\mathbf r\right\|^{3}}
+-\frac{\mathbf r_{3}}{\left\|\mathbf r_{3}\right\|^{3}}
+\right)\tag{15}
+$$
 
 日月引力摄动可以从多体问题的角度理解，卫星在围绕地球运动时同时受到太阳与月球引力的扰动，造成长周期轨道摄动。由于太阳和月球相对卫星距离很远，在一般精度需求下 只需把它们作为外部摄动体建立引力摄动模型即可，这类模型常基于牛顿第二定律与万有引力定律构建，三体引力摄动加速度如式15所示。
 
@@ -300,6 +319,6 @@ $$
 
 需要强调的是，星历定位并不要求用户理解全部动力学细节，但理解动力学模型的分层结构会显著提升对算法行为的解释力。无摄运动提供可解析且数值稳定的主结构，受摄运动解释为何轨道根数会漂移以及为何必须引入长期项与短周期项，星历定位则把这些物理与工程折中凝结为一套可由接收机实时执行的计算链条。从系统工程视角看星历的设计是一种把复杂动力学压缩成有限参数的艺术，既要让参数数量可控又要让它在小时级外推内足以吸收主要摄动力的影响，这正是现代导航系统持续演进的重要方向。
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTgyMDE4NDc4LDE3MTY3ODI5MjcsLTUyND
-AyNDY3NiwyMTMwMTk0NTI4LDE2ODI5ODQ2NzZdfQ==
+eyJoaXN0b3J5IjpbMTYwNDMzMzM3NCwxNzE2NzgyOTI3LC01Mj
+QwMjQ2NzYsMjEzMDE5NDUyOCwxNjgyOTg0Njc2XX0=
 -->
