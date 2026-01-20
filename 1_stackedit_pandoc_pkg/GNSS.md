@@ -7,7 +7,7 @@
 
 从应用角度看，GNSS已成为国家基础设施与关键战略能力的重要组成部分：既服务交通运输、测绘、应急救灾、公众位置服务，也支撑电力、通信、金融等行业的高精度时间同步；同时，GNSS又是一种开放的公共服务体系，系统长期演进且持续升级，带来信号体制、频率资源、接口标准与兼容互操作等问题。
 
-<img src="media/image1.jpeg" style="width:5.75972in;height:3.14375in" />
+<img src="https://raw.githubusercontent.com/amariszhou/desksat/main/1_stackedit_pandoc_pkg/media/image1.jpeg" />
 
 图 1 GNSS系统结构图
 
@@ -279,5 +279,5 @@ DOP常用指标包括GDOP、PDOP、HDOP、VDOP、TDOP等。对于地面用户，
 
 需要强调的是，星历定位并不要求用户理解全部动力学细节，但理解动力学模型的分层结构会显著提升对算法行为的解释力。无摄运动提供可解析且数值稳定的主结构，受摄运动解释为何轨道根数会漂移以及为何必须引入长期项与短周期项，星历定位则把这些物理与工程折中凝结为一套可由接收机实时执行的计算链条。从系统工程视角看星历的设计是一种把复杂动力学压缩成有限参数的艺术，既要让参数数量可控又要让它在小时级外推内足以吸收主要摄动力的影响，这正是现代导航系统持续演进的重要方向。
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTY4Mjk4NDY3Nl19
+eyJoaXN0b3J5IjpbMTUxNDU4NTg4NiwxNjgyOTg0Njc2XX0=
 -->
