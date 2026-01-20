@@ -37,13 +37,14 @@ GNSS性能评价常用一组相互关联的指标。在航空等高安全场景�
 
 SBAS这类“以地面监测网为核心、以地球同步轨道（GEO）卫星为广播链路”的增强系统，其基本工作方式是在广域范围内部署高精度参考站，实时估计GNSS主要误差（如星历钟差、电离层延迟等）并形成改正与完整性信息，再通过GEO卫星转发给用户，从而显著提升定位可靠性并提供完整性告警能力。 例如 EGNOS 被定义为欧洲区域的SBAS，用于提升GPS/Galileo等系统的性能并支持安全关键应用。
 
-<img src="media/image2.jpeg" style="width:4.17569in;height:2.78403in" />
+<img src="https://raw.githubusercontent.com/amariszhou/desksat/main/1_stackedit_pandoc_pkg/media/image2.jpeg" />
+<p align="center">图 2 EGNOS</p>
 
-图 2 EGNOS
 
 第二类是区域导航/区域增强星座，典型代表是日本QZSS与印度IRNSS（NavIC）。这类系统通常在本区域提供更优的卫星几何与服务可用性。例如QZSS通过“准天顶”轨道设计，使至少一颗卫星在高仰角长期可见，从而在城市峡谷、山地遮挡等环境改善可用性，并可提供对GNSS的补充增强服务，IRNSS/NavIC则面向印度及周边区域提供独立PNT能力。
 
-<img src="media/image3.jpeg" style="width:2.46389in;height:1.93611in" />
+<img src="https://raw.githubusercontent.com/amariszhou/desksat/main/1_stackedit_pandoc_pkg/media/image3.jpeg" />
+
 
 图 3 QZSS
 
@@ -279,5 +280,5 @@ DOP常用指标包括GDOP、PDOP、HDOP、VDOP、TDOP等。对于地面用户，
 
 需要强调的是，星历定位并不要求用户理解全部动力学细节，但理解动力学模型的分层结构会显著提升对算法行为的解释力。无摄运动提供可解析且数值稳定的主结构，受摄运动解释为何轨道根数会漂移以及为何必须引入长期项与短周期项，星历定位则把这些物理与工程折中凝结为一套可由接收机实时执行的计算链条。从系统工程视角看星历的设计是一种把复杂动力学压缩成有限参数的艺术，既要让参数数量可控又要让它在小时级外推内足以吸收主要摄动力的影响，这正是现代导航系统持续演进的重要方向。
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNjI0NjQzODg4LDE2ODI5ODQ2NzZdfQ==
+eyJoaXN0b3J5IjpbLTY0NDMwMTQ0OSwxNjgyOTg0Njc2XX0=
 -->
