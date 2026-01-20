@@ -87,9 +87,7 @@ GLONASS经典民用信号主要分布在G1（约1.6 GHz）与G2（约1.25 GHz）
 
 Galileo是欧盟/欧洲航天局主导建设的全球卫星导航系统，其设计从一开始就更强调“民用主导、服务分层清晰、与其他GNSS互操作”的理念。Galileo同样采用MEO星座实现全球覆盖，“3轨道面、每面若干卫星并含备份星”的规划，以保证全球任意地点的多星可见与良好的几何强度。地面段由控制中心与全球监测站网构成，承担轨道/钟差确定、导航电文生成、健康监测与服务性能评估等任务。用户段面向开放服务（OS）及更高等级业务（如商业/授权服务等）提供差异化能力，尤其适合多频组合与宽带观测驱动的高精度定位场景。
 
-<p align="center"><img src="https://raw.githubusercontent.com/amariszhou/desksat/main/1_stackedit_pandoc_pkg/media/image7.jpeg" />图 7 GALILEO星座</p>
-
-
+<p align="center"><img src="https://raw.githubusercontent.com/amariszhou/desksat/main/1_stackedit_pandoc_pkg/media/image7.jpeg" /><br>图 7 GALILEO星座</p>
 
 在频率与信号计划上，Galileo的互操作性非常突出，其E1频点与GPS L1、北斗B1C同频（1575.42 MHz），E5a与GPS L5/北斗B2a同频（1176.45 MHz），E5b与北斗B2I/B2b存在频段对齐（1207.14 MHz），同时还提供E6（1278.75 MHz）等业务频点；并且E5采用较宽带的信号设计（E5a/E5b及其组合），为抗多路径、提高测距精度与多频电离层改正提供更优观测条件。
 
@@ -192,8 +190,7 @@ DOP常用指标包括GDOP、PDOP、HDOP、VDOP、TDOP等。对于地面用户，
 
 导航定位是在解几何方程，而几何方程的输入来自卫星位置与卫星钟差。卫星位置并不是在空间中被直接测得，而是通过轨道动力学模型与星历参数描述出来，再由用户在观测历元把卫星坐标计算出来。动力学模型的任务可以理解为两层含义，一层是用尽可能简洁的规律描述卫星绕地运动的主导结构，另一层是在主导结构之上把不可避免的摄动作用以合适的方式吸收进参数或改正项，让计算出的轨道在若干小时乃至更长时间内保持足够精度。理解这一点有助于把无摄运动与受摄运动统一起来，也有助于把星历参数看成对轨道动力学的工程化编码。
 
-<img src="https://raw.githubusercontent.com/amariszhou/desksat/main/1_stackedit_pandoc_pkg/media/image8.png" />
-<p align="center">图 8 轨道动力学示意图</p>
+<p align="center"><img src="https://raw.githubusercontent.com/amariszhou/desksat/main/1_stackedit_pandoc_pkg/media/image8.png" /><br>图 8 轨道动力学示意图</p>
 
 
 **4.1  无摄运动**
@@ -315,6 +312,6 @@ $$
 
 需要强调的是，星历定位并不要求用户理解全部动力学细节，但理解动力学模型的分层结构会显著提升对算法行为的解释力。无摄运动提供可解析且数值稳定的主结构，受摄运动解释为何轨道根数会漂移以及为何必须引入长期项与短周期项，星历定位则把这些物理与工程折中凝结为一套可由接收机实时执行的计算链条。从系统工程视角看星历的设计是一种把复杂动力学压缩成有限参数的艺术，既要让参数数量可控又要让它在小时级外推内足以吸收主要摄动力的影响，这正是现代导航系统持续演进的重要方向。
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbOTY0OTEwMjk4LDE3MTY3ODI5MjcsLTUyND
-AyNDY3NiwyMTMwMTk0NTI4LDE2ODI5ODQ2NzZdfQ==
+eyJoaXN0b3J5IjpbLTE4MDAxOTM3MTAsMTcxNjc4MjkyNywtNT
+I0MDI0Njc2LDIxMzAxOTQ1MjgsMTY4Mjk4NDY3Nl19
 -->
