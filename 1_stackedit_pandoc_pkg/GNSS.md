@@ -43,8 +43,7 @@ SBAS这类“以地面监测网为核心、以地球同步轨道（GEO）卫星�
 
 第二类是区域导航/区域增强星座，典型代表是日本QZSS与印度IRNSS（NavIC）。这类系统通常在本区域提供更优的卫星几何与服务可用性。例如QZSS通过“准天顶”轨道设计，使至少一颗卫星在高仰角长期可见，从而在城市峡谷、山地遮挡等环境改善可用性，并可提供对GNSS的补充增强服务，IRNSS/NavIC则面向印度及周边区域提供独立PNT能力。
 
-<img src="https://raw.githubusercontent.com/amariszhou/desksat/main/1_stackedit_pandoc_pkg/media/image3.jpeg" />
-<p align="center">图 3 QZSS</p>
+<p align="center"><img src="https://raw.githubusercontent.com/amariszhou/desksat/main/1_stackedit_pandoc_pkg/media/image3.jpeg" /><br>图 3 QZSS</p>
 
 综合来看，导航增强星座（或增强体系）并非只是“多发几颗卫星”，而是“空间段、地面段、用户段”协同的系统工程。空间段负责广域播发改正与告警信息（或提供更优几何），地面段负责误差估计与完整性监测，用户段负责融合改正信息与自检算法。随着多系统多频点的发展，增强体系也在从单系统增强走向多系统互操作增强，从区域服务走向更广域、更高可靠的综合PNT能力。
 
@@ -323,6 +322,6 @@ $$
 
 需要强调的是，星历定位并不要求用户理解全部动力学细节，但理解动力学模型的分层结构会显著提升对算法行为的解释力。无摄运动提供可解析且数值稳定的主结构，受摄运动解释为何轨道根数会漂移以及为何必须引入长期项与短周期项，星历定位则把这些物理与工程折中凝结为一套可由接收机实时执行的计算链条。从系统工程视角看星历的设计是一种把复杂动力学压缩成有限参数的艺术，既要让参数数量可控又要让它在小时级外推内足以吸收主要摄动力的影响，这正是现代导航系统持续演进的重要方向。
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjA0OTcwODI2OCwxNzE2NzgyOTI3LC01Mj
-QwMjQ2NzYsMjEzMDE5NDUyOCwxNjgyOTg0Njc2XX0=
+eyJoaXN0b3J5IjpbLTE5ODQ1MTAzODgsMTcxNjc4MjkyNywtNT
+I0MDI0Njc2LDIxMzAxOTQ1MjgsMTY4Mjk4NDY3Nl19
 -->
