@@ -206,7 +206,7 @@ DOP常用指标包括GDOP、PDOP、HDOP、VDOP、TDOP等。对于地面用户，
 1.  无摄运动
 
 无摄运动常被称为二体问题或两体问题，它把卫星视作在地球中心引力作用下运动，忽略地球非球形、太阳月球引力、太阳光压等其他影响。在这种理想化假设下，轨道是稳定的开普勒轨道，其核心结论可以归结为轨道是以地球为焦点的圆锥曲线。对于导航卫星最常见的是椭圆轨道，速度随位置变化以及周期与轨道尺度之间存在明确的幂律关系，如式1-3。
-
+<img src="https://raw.githubusercontent.com/amariszhou/desksat/main/1_stackedit_pandoc_pkg/media/image9.wmf" />
 ![](media/image9.png)
 
 ![](media/image10.png)
@@ -283,5 +283,6 @@ DOP常用指标包括GDOP、PDOP、HDOP、VDOP、TDOP等。对于地面用户，
 
 需要强调的是，星历定位并不要求用户理解全部动力学细节，但理解动力学模型的分层结构会显著提升对算法行为的解释力。无摄运动提供可解析且数值稳定的主结构，受摄运动解释为何轨道根数会漂移以及为何必须引入长期项与短周期项，星历定位则把这些物理与工程折中凝结为一套可由接收机实时执行的计算链条。从系统工程视角看星历的设计是一种把复杂动力学压缩成有限参数的艺术，既要让参数数量可控又要让它在小时级外推内足以吸收主要摄动力的影响，这正是现代导航系统持续演进的重要方向。
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjEzMDE5NDUyOCwxNjgyOTg0Njc2XX0=
+eyJoaXN0b3J5IjpbLTE5MjAzNDY3MTIsMjEzMDE5NDUyOCwxNj
+gyOTg0Njc2XX0=
 -->
