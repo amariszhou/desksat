@@ -6,9 +6,7 @@
 全球导航卫星系统（GNSS，Global Navigation Satellite System）是一类利用卫星在全球范围内提供定位、导航与授时（PNT）服务的系统集合。它既可以指某一个具体系统（如 GPS、GLONASS、Galileo、北斗），也常被用作“多系统、多星座、多频点联合服务”的统称：用户接收机可同时接收来自不同卫星系统的信号，通过统一的观测模型进行融合解算，从而在复杂环境中获得更好的可用性与精度。GNSS不仅包括一个或多个卫星星座本体，也包括各类增强系统（例如卫星增强、地基增强、机载增强等）共同构成的综合体系。
 
 从应用角度看，GNSS已成为国家基础设施与关键战略能力的重要组成部分：既服务交通运输、测绘、应急救灾、公众位置服务，也支撑电力、通信、金融等行业的高精度时间同步；同时，GNSS又是一种开放的公共服务体系，系统长期演进且持续升级，带来信号体制、频率资源、接口标准与兼容互操作等问题。
-
-<img src="https://raw.githubusercontent.com/amariszhou/desksat/main/1_stackedit_pandoc_pkg/media/image1.jpeg" />
-<p align="center">图 1 GNSS系统结构图</p>
+<p align="center"><img src="https://raw.githubusercontent.com/amariszhou/desksat/main/1_stackedit_pandoc_pkg/media/image1.jpeg" /><br>图 1 GNSS系统结构图</p>
 
 
 **1. 1 GNSS定义、系统构成**
@@ -37,8 +35,7 @@ GNSS性能评价常用一组相互关联的指标。在航空等高安全场景�
 
 SBAS这类“以地面监测网为核心、以地球同步轨道（GEO）卫星为广播链路”的增强系统，其基本工作方式是在广域范围内部署高精度参考站，实时估计GNSS主要误差（如星历钟差、电离层延迟等）并形成改正与完整性信息，再通过GEO卫星转发给用户，从而显著提升定位可靠性并提供完整性告警能力。 例如 EGNOS 被定义为欧洲区域的SBAS，用于提升GPS/Galileo等系统的性能并支持安全关键应用。
 
-<img src="https://raw.githubusercontent.com/amariszhou/desksat/main/1_stackedit_pandoc_pkg/media/image2.jpeg" />
-<p align="center">图 2 EGNOS</p>
+<p align="center"><img src="https://raw.githubusercontent.com/amariszhou/desksat/main/1_stackedit_pandoc_pkg/media/image2.jpeg" /><br>图 2 EGNOS</p>
 
 
 第二类是区域导航/区域增强星座，典型代表是日本QZSS与印度IRNSS（NavIC）。这类系统通常在本区域提供更优的卫星几何与服务可用性。例如QZSS通过“准天顶”轨道设计，使至少一颗卫星在高仰角长期可见，从而在城市峡谷、山地遮挡等环境改善可用性，并可提供对GNSS的补充增强服务，IRNSS/NavIC则面向印度及周边区域提供独立PNT能力。
@@ -56,8 +53,7 @@ SBAS这类“以地面监测网为核心、以地球同步轨道（GEO）卫星�
 
 北斗卫星导航系统是中国建设并运营的全球卫星导航系统。当前全球服务以北斗三号（BDS-3）为主体，形成“MEO为全球覆盖、IGSO/GEO强化区域服务”的混合星座思路，包括24颗MEO + 3颗IGSO + 3颗GEO，在亚太区域可提供更有利的几何条件与更高仰角可见卫星，从而增强复杂遮挡环境下的可用性与连续性。
 
-<img src="https://raw.githubusercontent.com/amariszhou/desksat/main/1_stackedit_pandoc_pkg/media/image4.jpeg" />
-<p align="center">图 4 北斗卫星</p>
+<p align="center"><img src="https://raw.githubusercontent.com/amariszhou/desksat/main/1_stackedit_pandoc_pkg/media/image4.jpeg" /><br>图 4 北斗卫星</p>
 
 从系统构成看，空间段卫星播发导航电文与测距信号；地面段通过监测网、主控与注入等设施完成星历钟差估计、健康管理与电文生成；用户段则覆盖大众消费、行业高精度与授时终端等。北斗的业务体系除基本PNT外，还逐步形成更丰富的“特色能力”组合，例如面向广域的改正/增强信息播发、部分卫星搭载的搜救（MEOSAR）等能力扩展。
 
@@ -69,8 +65,7 @@ SBAS这类“以地面监测网为核心、以地球同步轨道（GEO）卫星�
 
 GPS是最早实现全球业务化运行并长期主导民用产业生态的GNSS，从早期Block卫星到后续现代化批次的连续演进是在保持对既有民用信号后向兼容的前提下，通过增加新民用信号（如L2C、L5、L1C）、增强军用抗干扰能力（如M码）以及提升星载原子钟与导航电文质量，来持续改善精度、完整性与抗干扰性能。
 
-<img src="https://raw.githubusercontent.com/amariszhou/desksat/main/1_stackedit_pandoc_pkg/media/image5.jpeg" />
-<p align="center">图 5 GPS卫星</p>
+<p align="center"><img src="https://raw.githubusercontent.com/amariszhou/desksat/main/1_stackedit_pandoc_pkg/media/image5.jpeg" /><br>图 5 GPS卫星</p>
 
 在空间段构型上，GPS经典设计目标是全球任意地点同时可见4颗以上卫星，满足单点三维定位与授时解算需求。其星座通常描述为中圆轨道（MEO）多轨道面布置，24星、6轨道面、约55°倾角，这种结构在全球覆盖与地面控制可实施性之间取得了长期稳定的平衡。GPS地面段由主控、监测与注入等设施构成，核心任务是卫星测控、轨道确定与钟差估计、导航电文生成发布，以及对卫星健康状态的监测与告警。
 
@@ -82,8 +77,7 @@ GPS长期产业化的核心原因在于开放服务信号稳定、全球覆盖�
 
 GLONASS是俄罗斯建设并运营的全球卫星导航系统。在星座构型上，GLONASS同样采用MEO星座实现全球覆盖，24星、3轨道面、较高轨道倾角（常见为约64.8°），以更好覆盖高纬度地区。地面段的任务与其他GNSS类似，重点在于轨道与钟差确定、导航电文生成与注入、系统运行维护与完好性管理。用户段覆盖民用开放服务与授权服务接收机，并在与其他GNSS联合使用中显著改善可用性（尤其在高纬/遮挡环境中）。
 
-<img src="https://raw.githubusercontent.com/amariszhou/desksat/main/1_stackedit_pandoc_pkg/media/image6.png" />
-<p align="center">图 6 GLONASS卫星</p>
+<p align="center"><img src="https://raw.githubusercontent.com/amariszhou/desksat/main/1_stackedit_pandoc_pkg/media/image6.png" /><br>图 6 GLONASS卫星</p>
 
 GLONASS经典民用信号主要分布在G1（约1.6 GHz）与G2（约1.25 GHz）频段，并通过频分多址（FDMA）为不同卫星分配不同频点（即同一信号体制、不同载波频率）。这一做法的直接结果是接收机射频前端与滤波设计要覆盖更宽的频率范围，且多系统共存时更需精细处理频谱邻近干扰与互调问题。
 
@@ -93,8 +87,7 @@ GLONASS经典民用信号主要分布在G1（约1.6 GHz）与G2（约1.25 GHz）
 
 Galileo是欧盟/欧洲航天局主导建设的全球卫星导航系统，其设计从一开始就更强调“民用主导、服务分层清晰、与其他GNSS互操作”的理念。Galileo同样采用MEO星座实现全球覆盖，“3轨道面、每面若干卫星并含备份星”的规划，以保证全球任意地点的多星可见与良好的几何强度。地面段由控制中心与全球监测站网构成，承担轨道/钟差确定、导航电文生成、健康监测与服务性能评估等任务。用户段面向开放服务（OS）及更高等级业务（如商业/授权服务等）提供差异化能力，尤其适合多频组合与宽带观测驱动的高精度定位场景。
 
-<img src="https://raw.githubusercontent.com/amariszhou/desksat/main/1_stackedit_pandoc_pkg/media/image7.jpeg" />
-<p align="center">图 7 GALILEO星座</p>
+<p align="center"><img src="https://raw.githubusercontent.com/amariszhou/desksat/main/1_stackedit_pandoc_pkg/media/image7.jpeg" />图 7 GALILEO星座</p>
 
 
 
@@ -322,6 +315,6 @@ $$
 
 需要强调的是，星历定位并不要求用户理解全部动力学细节，但理解动力学模型的分层结构会显著提升对算法行为的解释力。无摄运动提供可解析且数值稳定的主结构，受摄运动解释为何轨道根数会漂移以及为何必须引入长期项与短周期项，星历定位则把这些物理与工程折中凝结为一套可由接收机实时执行的计算链条。从系统工程视角看星历的设计是一种把复杂动力学压缩成有限参数的艺术，既要让参数数量可控又要让它在小时级外推内足以吸收主要摄动力的影响，这正是现代导航系统持续演进的重要方向。
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE5ODQ1MTAzODgsMTcxNjc4MjkyNywtNT
-I0MDI0Njc2LDIxMzAxOTQ1MjgsMTY4Mjk4NDY3Nl19
+eyJoaXN0b3J5IjpbOTY0OTEwMjk4LDE3MTY3ODI5MjcsLTUyND
+AyNDY3NiwyMTMwMTk0NTI4LDE2ODI5ODQ2NzZdfQ==
 -->
