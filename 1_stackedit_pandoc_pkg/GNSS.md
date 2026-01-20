@@ -206,19 +206,19 @@ DOP常用指标包括GDOP、PDOP、HDOP、VDOP、TDOP等。对于地面用户，
 1.  无摄运动
 
 无摄运动常被称为二体问题或两体问题，它把卫星视作在地球中心引力作用下运动，忽略地球非球形、太阳月球引力、太阳光压等其他影响。在这种理想化假设下，轨道是稳定的开普勒轨道，其核心结论可以归结为轨道是以地球为焦点的圆锥曲线。对于导航卫星最常见的是椭圆轨道，速度随位置变化以及周期与轨道尺度之间存在明确的幂律关系，如式1-3。
+
 $$
-\begin{aligned}
-\ddot{\mathbf{r}} &= -\frac{\mu}{r^3}\mathbf{r} \\
-v^2 &= \mu\left(\frac{2}{r}-\frac{1}{a}\right)\\n=n
-\end{aligned}
+\ddot{\mathbf r}=-\frac{\mu}{r^{3}}\mathbf r \tag{1}
 $$
 
+$$
+v^{2}=\mu\left(\frac{2}{r}-\frac{1}{a}\right) \tag{2}
+$$
 
-![](media/image9.png)
-
-![](media/image10.png)
-
-![](media/image11.png)
+$$
+n=\sqrt{\frac{\mu}{a^{3}}},\quad
+T=\frac{2\pi}{n}=2\pi\sqrt{\frac{a^{3}}{\mu}} \tag{3}
+$$
 
 常用轨道根数来参数化一条椭圆轨道，椭圆的形状大小由长半轴与偏心率决定，近地点地心距与远地点地心距可直接由长半轴与偏心率给出，因而这两者被称为形状参数。轨道在三维空间的朝向由轨道倾角，升交点赤经或升交点经度，以及近地点角距确定，它们共同决定轨道平面与赤道平面的空间关系以及椭圆在轨道平面内的定向，因而常被称为定向参数。
 
@@ -290,6 +290,6 @@ $$
 
 需要强调的是，星历定位并不要求用户理解全部动力学细节，但理解动力学模型的分层结构会显著提升对算法行为的解释力。无摄运动提供可解析且数值稳定的主结构，受摄运动解释为何轨道根数会漂移以及为何必须引入长期项与短周期项，星历定位则把这些物理与工程折中凝结为一套可由接收机实时执行的计算链条。从系统工程视角看星历的设计是一种把复杂动力学压缩成有限参数的艺术，既要让参数数量可控又要让它在小时级外推内足以吸收主要摄动力的影响，这正是现代导航系统持续演进的重要方向。
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE5MDU4MDM5MDksLTUyNDAyNDY3NiwyMT
-MwMTk0NTI4LDE2ODI5ODQ2NzZdfQ==
+eyJoaXN0b3J5IjpbMTcxNjc4MjkyNywtNTI0MDI0Njc2LDIxMz
+AxOTQ1MjgsMTY4Mjk4NDY3Nl19
 -->
