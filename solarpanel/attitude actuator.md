@@ -2,8 +2,6 @@
 
 # 🛰️ 航天器姿态控制执行器 (Attitude Control Actuators) 
 
-## 概述
-
 卫星姿态控制执行器是接收来自卫星姿态控制计算机的指令，通过产生内部力矩或外部力矩，改变或保持卫星在空间中预期姿态的物理设备。根据力矩产生的方式，执行器主要分为两类：**动量交换装置**（如反应轮、控制力矩陀螺）和**外部力矩产生装置**（如磁力矩器、微推力器）。
 
 ## 一、 反应轮与动量轮 (Reaction Wheels & Momentum Wheels)
@@ -217,5 +215,5 @@ _(其中 $\dot{m}$ 为质量流率，$v_e$ 为喷气速度)_
   
  <p align="center"><img src="https://raw.githubusercontent.com/amariszhou/desksat/main/solarpanel/image10.jpg" /><br>图 4 5N LT 推进器 </p>   
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTkzNTgzMDQ5NV19
+eyJoaXN0b3J5IjpbMzQwNzE5NDA1LDE5MzU4MzA0OTVdfQ==
 -->
